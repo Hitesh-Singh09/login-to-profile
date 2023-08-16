@@ -14,9 +14,8 @@ app.use(express.static((path.join(__dirname, "./dist"))))
 const port =process.env.PORT || 3000 ;
 
 
-//mongoose chat-gpt connection
+
 async function main() {
-    // Replace this connection string with the one from your MongoDB Atlas cluster
     const atlasConnectionString =process.env.MONGO_URL;
 
     await mongoose.connect(atlasConnectionString, {
